@@ -15,17 +15,17 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 CSV="$DIR/data/big.csv"
 
 echo "Generating $ROWS rows..."
-node "$DIR/src/generate.js" "$ROWS" "$CSV"
+node "$DIR/generate.js" "$ROWS" "$CSV"
 echo ""
 
 echo "=== naive @ ${HEAP}MB heap cap (expected: OOM crash) ==="
-node --max-old-space-size="$HEAP" "$DIR/src/naive.js" "$CSV"
+node --max-old-space-size="$HEAP" "$DIR/naive.js" "$CSV"
 NAIVE_EXIT=$?
 echo "exit code: $NAIVE_EXIT"
 echo ""
 
 echo "=== pipeline @ ${HEAP}MB heap cap (expected: success) ==="
-node --max-old-space-size="$HEAP" "$DIR/src/pipeline.js" "$CSV"
+node --max-old-space-size="$HEAP" "$DIR/pipeline.js" "$CSV"
 PIPE_EXIT=$?
 echo "exit code: $PIPE_EXIT"
 echo ""

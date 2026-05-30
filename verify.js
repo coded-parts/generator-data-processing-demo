@@ -24,7 +24,7 @@ function run(label, file, args) {
   // so the number reflects live memory, not uncollected garbage.
   const res = spawnSync(
     process.execPath,
-    ['--expose-gc', path.join(__dirname, 'src', file), ...args],
+    ['--expose-gc', path.join(__dirname, file), ...args],
     { encoding: 'utf8', maxBuffer: 1024 * 1024 * 64 }
   );
   if (res.status !== 0) {
