@@ -85,3 +85,13 @@ Generated CSVs land in `data/` and can get large. Delete them anytime:
 ```bash
 rm -rf data/
 ```
+
+## Get the Free Ebook
+[Get it here](https://codedparts.gumroad.com/l/generators-in-js)
+
+<p align="center">
+<img width="600" height="600" alt="thumbnail" src="https://github.com/user-attachments/assets/6e41bef2-5d4f-4b59-b828-6a1d5dcd1cb6" />
+</p>
+
+
+
